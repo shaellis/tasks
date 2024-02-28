@@ -31,14 +31,8 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    for (const question of questions)
-    {
-        if (question.id == id)
-        {
-            return question;
-        }
-    }
-    return null;
+    return questions.find(question => question.id === id) || null;
+ 
 }
 
 /**
@@ -62,27 +56,19 @@ export function getNames(questions: Question[]): string[] {
  */
 export function sumPoints(questions: Question[]): number 
 {
-    let pointAmount = 0;
-    for (const question of questions)
-    {
-        pointAmount += question.points;
-    }
-    return pointAmount;
+    return questions.reduce((totalPoints, question) => totalPoints + question.points, 0);
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    let pointAmount = 0;
-    for (const question of questions)
-    {
-        if (question.published == true)
-        {
-            pointAmount += question.points;
+    return questions.reduce((totalPoints, question) => {
+        if (question.published) {
+            return totalPoints + question.points;
         }
-    }
-    return pointAmount;
+        return totalPoints;
+    }, 0);
 }
 
 /***
@@ -157,22 +143,11 @@ export function publishAll(questions: Question[]): Question[]
  */
 export function sameType(questions: Question[]): boolean 
 {
-    if (questions.length == 0)
-    {
-        return true;
+    if (questions.length <= 1) {
+        return true; // if there's only one or zero questions, they're all the same type
     }
-
-    const type1 = questions[0].type;
-
-    for (let i = 1; i < questions.length; i++)
-    {
-        if (questions[i].type != type1)
-        {
-            return false;
-        }
-    }
-    
-    return true;
+    const firstType = questions[0].type;
+    return questions.every(question => question.type === firstType);
 }
 
 /***
@@ -281,17 +256,13 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const copiedQuestions: Question[] = [];
+    const copiedQuestions = questions.map(question => ({ ...question }));
 
-    for (const question of questions)
-    {
-        copiedQuestions.push(question);
-        
-        if (question.id == targetId)
-        {
-            const duplicate = duplicateQuestion(newId, question);
-            copiedQuestions.push(duplicate);
-        }
+    const index = copiedQuestions.findIndex(question => question.id === targetId);
+    if (index !== -1) {
+        const duplicate = duplicateQuestion(newId, copiedQuestions[index]);
+        copiedQuestions.splice(index + 1, 0, duplicate);
     }
+
     return copiedQuestions;
 }
