@@ -11,27 +11,30 @@ Browserslist: caniuse-lite is outdated. Please run:
 Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
-PASS src/arrays.test.ts
 PASS src/objects.test.ts
+PASS src/arrays.test.ts
+PASS src/nested.test.ts
 PASS src/functions.test.ts
-PASS src/HtmlCss.test.tsx
 PASS src/text.test.tsx
+PASS src/HtmlCss.test.tsx
 PASS src/App.test.tsx
 ----------------|---------|----------|---------|---------|-------------------
 File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------|---------|----------|---------|---------|-------------------
-All files       |   95.12 |    88.88 |     100 |   94.52 |                   
- src            |   95.12 |    88.88 |     100 |   94.52 |                   
+All files       |   96.59 |    91.11 |     100 |   96.18 |                   
+ src            |   96.59 |    91.11 |     100 |   96.18 |                   
   App.tsx       |     100 |      100 |     100 |     100 |                   
   arrays.ts     |     100 |      100 |     100 |     100 |                   
   functions.ts  |    87.5 |    84.61 |     100 |    87.5 | 33,37,47          
+  nested.ts     |   98.46 |    96.29 |     100 |   98.27 | 109               
   objects.ts    |   95.23 |     87.5 |     100 |   95.23 | 59                
  src/interfaces |       0 |        0 |       0 |       0 |                   
+  answer.ts     |       0 |        0 |       0 |       0 |                   
   question.ts   |       0 |        0 |       0 |       0 |                   
 ----------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 6 passed, 6 total
-Tests:       33 passed, 33 total
+Test Suites: 7 passed, 7 total
+Tests:       49 passed, 49 total
 Snapshots:   0 total
-Time:        3.747 s
+Time:        4.002 s
 Ran all test suites.
