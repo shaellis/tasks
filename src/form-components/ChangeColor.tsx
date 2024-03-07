@@ -42,7 +42,7 @@ export function ChangeColor(): JSX.Element
                 ))}
             </Form>
             <div data-testid = "colored-box" style = {{ backgroundColor: selectedColor, width: "100px", height: "100px" }}>
-                <span style={{ color: "white" }}>{selectedColor}</span>
+                <span style={{ color: selectedColor == "white" || selectedColor == "yellow" ? "black" : "white" }}>{selectedColor}</span>
                 Example Text!
             </div>
         </div>
