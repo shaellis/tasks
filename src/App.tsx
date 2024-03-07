@@ -31,6 +31,8 @@ function App(): JSX.Element {
             <hr></hr>
             <EditMode></EditMode>
             <hr></hr>
+            <DoubleHalf></DoubleHalf>
+            <hr></hr>
             <ChangeColor></ChangeColor>
             <hr></hr>
             <MultipleChoiceQuestion
