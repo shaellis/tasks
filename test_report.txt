@@ -25,8 +25,8 @@ PASS src/components/ChangeType.test.tsx
 PASS src/form-components/EditMode.test.tsx
 PASS src/components/CycleHoliday.test.tsx
 PASS src/form-components/GiveAttempts.test.tsx
-PASS src/form-components/ChangeColor.test.tsx
 PASS src/components/Counter.test.tsx
+PASS src/form-components/ChangeColor.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
@@ -34,7 +34,7 @@ PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   97.13 |     90.9 |    99.2 |    96.8 |                   
+All files                    |   97.13 |     91.2 |    99.2 |    96.8 |                   
  src                         |   95.74 |    89.77 |   98.59 |      95 |                   
   App.tsx                    |      50 |      100 |      50 |      50 | 68                
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
@@ -53,7 +53,7 @@ All files                    |   97.13 |     90.9 |    99.2 |    96.8 |
   RevealAnswer.tsx           |     100 |      100 |     100 |     100 |                   
   StartAttempt.tsx           |     100 |      100 |     100 |     100 |                   
   TwoDice.tsx                |     100 |      100 |     100 |     100 |                   
- src/form-components         |     100 |    92.85 |     100 |     100 |                   
+ src/form-components         |     100 |    94.44 |     100 |     100 |                   
   ChangeColor.tsx            |     100 |      100 |     100 |     100 |                   
   CheckAnswer.tsx            |     100 |      100 |     100 |     100 |                   
   EditMode.tsx               |     100 |      100 |     100 |     100 |                   
@@ -67,5 +67,5 @@ All files                    |   97.13 |     90.9 |    99.2 |    96.8 |
 Test Suites: 20 passed, 20 total
 Tests:       134 passed, 134 total
 Snapshots:   0 total
-Time:        7.827 s
+Time:        7.486 s
 Ran all test suites.
